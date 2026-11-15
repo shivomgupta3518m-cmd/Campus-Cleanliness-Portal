@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Cleanliness Portal - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌿 Campus Cleanliness Portal</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="report.html">Report Issue</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <main class="container">
+    <section class="card">
+      <h3>Cleanliness Reports</h3>
+
+      <!-- Search & Status Filter -->
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search by location, category, or detail...">
+        <select id="statusFilter">
+          <option value="All">All Statuses</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+        </select>
+      </div>
+
+      <!-- Static HTML Table -->
+      <div class="table-wrap">
+        <table id="reportsTable">
+          <thead>
+            <tr><th>Location</th><th>Category</th><th>Description</th><th>Date</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Washroom</td><td>No Water</td><td>Tap water stopped in 2nd floor washroom</td><td>2026-11-01</td><td><span class="badge pending" onclick="toggleStatus(this)">Pending</span></td></tr>
+            <tr><td>Canteen</td><td>Overflowing Dustbin</td><td>Dustbins overflowing near lunch counter</td><td>2026-11-01</td><td><span class="badge progress" onclick="toggleStatus(this)">In Progress</span></td></tr>
+            <tr><td>Classroom</td><td>Dirty Floor</td><td>Room 204 floor needs sweeping</td><td>2026-10-31</td><td><span class="badge resolved" onclick="toggleStatus(this)">Resolved</span></td></tr>
+            <tr><td>Corridor</td><td>Bad Smell</td><td>Foul odor near east waste chute</td><td>2026-10-30</td><td><span class="badge pending" onclick="toggleStatus(this)">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Location Summary -->
+    <section class="card">
+      <h3>Location-wise Summary</h3>
+      <div class="loc-bar"><div class="loc-name"><span>Washroom</span><span>2 Issues</span></div><div class="bar-track"><div class="bar-fill" style="width: 50%;"></div></div></div>
+      <div class="loc-bar"><div class="loc-name"><span>Canteen</span><span>1 Issue</span></div><div class="bar-track"><div class="bar-fill" style="width: 25%;"></div></div></div>
+      <div class="loc-bar"><div class="loc-name"><span>Classroom</span><span>1 Issue</span></div><div class="bar-track"><div class="bar-fill" style="width: 25%;"></div></div></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Campus Cleanliness Portal &bull; College Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Cleanliness Portal - Report Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🌿 Campus Cleanliness Portal</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="report.html">Report Issue</a>
+      <a href="dashboard.html">Dashboard</a>
+    </div>
+  </nav>
+
+  <!-- Report Form Section -->
+  <main class="container">
+    <section class="card">
+      <h3>Submit a Cleanliness Report</h3>
+      <form action="dashboard.html" method="get">
+        <div class="form-group">
+          <label for="name">Student / Staff Name</label>
+          <input type="text" id="name" name="name" required minlength="3" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <label for="location">Location</label>
+          <select id="location" name="location" required>
+            <option value="">-- Select Location --</option>
+            <option value="Classroom">Classroom</option>
+            <option value="Washroom">Washroom</option>
+            <option value="Canteen">Canteen</option>
+            <option value="Corridor">Corridor</option>
+            <option value="Ground">Ground</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" name="category" required>
+            <option value="">-- Select Category --</option>
+            <option value="Dirty Floor">Dirty Floor</option>
+            <option value="Overflowing Dustbin">Overflowing Dustbin</option>
+            <option value="No Water">No Water</option>
+            <option value="Bad Smell">Bad Smell</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" name="description" rows="3" required minlength="10" placeholder="Describe the cleanliness issue..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="date" id="date" name="date" required>
+        </div>
+
+        <button type="submit" class="btn" style="width: 100%;">Submit Report</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Campus Cleanliness Portal &bull; College Project</p>
+  </footer>
+
+</body>
+</html>
+
